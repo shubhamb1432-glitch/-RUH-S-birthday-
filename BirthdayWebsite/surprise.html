@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Final Surprise 💖</title>
+<style>
+body {
+    margin: 0;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    flex-direction: column;
+}
+video {
+    max-width: 400px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+h1 {
+    margin-bottom: 20px;
+}
+</style>
+</head>
+<body>
+
+<audio id="bgMusic" loop autoplay>
+  <source src="here with me .mpeg" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<h1>Here’s your Final Surprise 💖</h1>
+<video src="surprise.mp4" controls autoplay></video>
+<h2>I LOVE YOU RICHU ❤️</h2>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+// Some browsers block autoplay with sound, try to play when loaded
+window.addEventListener('load', () => {
+    music.play().catch(() => {
+        console.log("Autoplay blocked, user interaction required to play music.");
+    });
+});
+</script>
+
+</body>
+</html>
